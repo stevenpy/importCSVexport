@@ -1,4 +1,7 @@
 <h1>Sales</h1>
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
 <table>
 	<thead>
 		<th>Email</th>
@@ -8,7 +11,7 @@
 	<tbody>
 		<% @sales.each do |sale| %>
 			<tr>
-				<td><%= sale.email %></td>
+			  <td><%= sale.email %></td>  	
 				<td><%= sale.first_name %></td>
 				<td><%= sale.last_name %></td>
 			</tr>

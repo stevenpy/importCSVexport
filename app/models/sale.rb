@@ -1,6 +1,6 @@
 class Sale < ApplicationRecord
 
-	def self.import(file)
+  def self.import(file)
 		counter = 0
 		CSV.foreach(file.path, headers: true, header_converters: :symbol) do |row|
 			sale = Sale.assign_from_row(row)
