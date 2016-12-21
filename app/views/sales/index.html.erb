@@ -1,0 +1,22 @@
+<h1>Sales</h1>
+<table>
+	<thead>
+		<th>Email</th>
+		<th>Firstname</th>
+		<th>Lastname</th>
+	</thead>
+	<tbody>
+		<% @sales.each do |sale| %>
+			<tr>
+				<td><%= sale.email %></td>
+				<td><%= sale.first_name %></td>
+				<td><%= sale.last_name %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+
+<%= form_tag import_sales_path, multipart: true do %>
+	<%= file_field_tag :file %>
+	<%= submit_tag "Upload" %>
+<% end %>
