@@ -14,7 +14,7 @@ class Sale < ApplicationRecord
 	end
 
 	def self.to_csv
-    attributes = %w{email first_name last_name}
+    attributes = %w{ticket_number command reservation reservation_date reservation_hour}
 
     CSV.generate(headers: true) do |csv|
       csv << attributes
@@ -26,8 +26,8 @@ class Sale < ApplicationRecord
   end
 
   def self.assign_from_row(row)
-  	sale = Sale.where(email: row[:email]).first_or_initialize
-  	sale.assign_attributes row.to_hash.slice(:first_name, :last_name)
+  	sale = Sale.where(numero_billet: row[:numero_billet]).first_or_initialize
+  	sale.assign_attributes row.to_hash.slice(:commande, :reservation, :date_reservation, :heure_reservation, :cle_spectacle, :spectacle, :cle_representation, :date_representation, :heure_representation, :date_fin_representation, :heure_fin_representation, :prix, :date_acces, :heure_acces, :tarif, :type_de_client, :type_de_produit, :serie, :etage, :filiere_de_vente, :nom, :prenom, :email, :adresse, :code_postal, :pays, :age, :sexe)
   	sale
   end
 end

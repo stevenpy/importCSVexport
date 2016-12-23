@@ -4,16 +4,18 @@
 <% end %>
 <table>
 	<thead>
-		<th>Email</th>
-		<th>Firstname</th>
-		<th>Lastname</th>
+		<th>Numero Billet</th>
+		<th>Commande</th>
+		<th>Reservation</th>
+		<th>Date reservation</th>
 	</thead>
 	<tbody>
 		<% @sales.each do |sale| %>
 			<tr>
-				<td><%= sale.email %></td>
-				<td><%= sale.first_name %></td>
-				<td><%= sale.last_name %></td>
+				<td><%= sale.numero_billet %></td>
+				<td><%= sale.commande %></td>
+				<td><%= sale.reservation %></td>
+				<td><%= sale.date_reservation %></td>
 			</tr>
 		<% end %>
 	</tbody>
