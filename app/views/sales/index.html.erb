@@ -1,38 +1,55 @@
-<h1>Sales</h1>
+<nav class="navbar navbar-light bg-faded">
+  <ul class="nav navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Features</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Pricing</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">About</a>
+    </li>
+  </ul>
+</nav>
 <% if flash[:notice] %>
   <div class="notice"><%= flash[:notice] %></div>
 <% end %>
-<table>
-	<thead>
-		<th>Numero Billet</th>
-		<th>Commande</th>
-		<th>Reservation</th>
-		<th>Date reservation</th>
-		<th>Heure reservation</th>
-		<th>Cle spectacle</th>
-		<th>Spectacle</th>
-		<th>Cle representation</th>
-		<th>Date representation</th>
-		<th>Heure representation</th>
-		<th>Date fin representation</th>
-		<th>Heure fin representation</th>
-		<th>Prix</th>
-		<th>Date acces</th>
-		<th>Heure acces</th>
-		<th>Tarif</th>
-		<th>Type de client</th>
-		<th>Type de produit</th>
-		<th>Serie</th>
-		<th>Etage</th>
-		<th>Filiere de vente</th>
-		<th>Nom</th>
-		<th>Prenom</th>
-		<th>Email</th>
-		<th>Adresse</th>
-		<th>Code postal</th>
-		<th>Pays</th>
-		<th>Age</th>
-		<th>Sexe</th>
+<table class="table table-bordered">
+	<thead class="thead-inverse">
+		<tr>
+			<th>Numero Billet</th>
+			<th>Commande</th>
+			<th>Reservation</th>
+			<th>Date reservation</th>
+			<th>Heure reservation</th>
+			<th>Cle spectacle</th>
+			<th>Spectacle</th>
+			<th>Cle representation</th>
+			<th>Date representation</th>
+			<th>Heure representation</th>
+			<th>Date fin representation</th>
+			<th>Heure fin representation</th>
+			<th>Prix</th>
+			<th>Date acces</th>
+			<th>Heure acces</th>
+			<th>Tarif</th>
+			<th>Type de client</th>
+			<th>Type de produit</th>
+			<th>Serie</th>
+			<th>Etage</th>
+			<th>Filiere de vente</th>
+			<th>Nom</th>
+			<th>Prenom</th>
+			<th>Email</th>
+			<th>Adresse</th>
+			<th>Code postal</th>
+			<th>Pays</th>
+			<th>Age</th>
+			<th>Sexe</th>
+		<tr>
 	</thead>
 	<tbody>
 		<% @sales.each do |sale| %>
