@@ -10,6 +10,9 @@ class SalesController < ApplicationController
 
 	def import
 		count = Sale.import params[:file]
-		redirect_to sales_path, notice: "Imported #{count} sales"
+		redirect_to sales_path, notice: "Vous avez importez #{count} réservations avec succès !"
+	end
+
+	def show
 	end
 end
