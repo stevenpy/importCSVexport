@@ -2,7 +2,7 @@ class Sale < ApplicationRecord
 
 	def self.import(file)
 		counter = 0
-		CSV.foreach(file.path, headers: true, header_converters: :symbol) do |row|
+		CSV.foreach(file.path, headers: true, header_converters: :symbol, :col_sep => ';', encoding:'iso-8859-1:utf-8') do |row|
 			sale = Sale.assign_from_row(row)
 			if sale.save
 				counter += 1
