@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   root 'sales#index'
 
   resources :sales do
-  	collection do
-  		post :import
-  		get :stats
-  	end
+    collection do
+      post :import
+      get :stats
+    end
   end
 end

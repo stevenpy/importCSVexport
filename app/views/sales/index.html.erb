@@ -2,72 +2,72 @@
   <div class="alert alert-success" role="alert"><%= flash[:notice] %></div>
 <% end %>
 <table class="table table-bordered">
-	<thead class="thead-inverse">
-		<tr>
-			<th>Numero Billet</th>
-			<th>Commande</th>
-			<th>Reservation</th>
-			<th>Date reservation</th>
-			<th>Heure reservation</th>
-			<th>Cle spectacle</th>
-			<th>Spectacle</th>
-			<th>Cle representation</th>
-			<th>Date representation</th>
-			<th>Heure representation</th>
-			<th>Date fin representation</th>
-			<th>Heure fin representation</th>
-			<th>Prix</th>
-			<th>Date acces</th>
-			<th>Heure acces</th>
-			<th>Tarif</th>
-			<th>Type de client</th>
-			<th>Type de produit</th>
-			<th>Serie</th>
-			<th>Etage</th>
-			<th>Filiere de vente</th>
-			<th>Nom</th>
-			<th>Prenom</th>
-			<th>Email</th>
-			<th>Adresse</th>
-			<th>Code postal</th>
-			<th>Pays</th>
-			<th>Age</th>
-			<th>Sexe</th>
-		<tr>
-	</thead>
-	<tbody>
-		<% @sales.each do |sale| %>
-			<tr>
-				<td><%= sale.numero_billet %></td>
-				<td><%= sale.commande %></td>
-				<td><%= sale.reservation %></td>
-				<td><%= sale.date_reservation %></td>
-				<td><%= sale.heure_reservation %></td>
-				<td><%= sale.cle_spectacle %></td>
-				<td><%= sale.spectacle %></td>
-				<td><%= sale.cle_representation %></td>
-				<td><%= sale.date_representation %></td>
-				<td><%= sale.heure_representation %></td>
-				<td><%= sale.date_fin_representation %></td>
-				<td><%= sale.heure_fin_representation %></td>
-				<td><%= sale.prix %></td>
-				<td><%= sale.date_acces %></td>
-				<td><%= sale.heure_acces %></td>
-				<td><%= sale.tarif %></td>
-				<td><%= sale.type_de_client %></td>
-				<td><%= sale.type_de_produit %></td>
-				<td><%= sale.serie %></td>
-				<td><%= sale.etage %></td>
-				<td><%= sale.filiere_de_vente %></td>
-				<td><%= sale.nom %></td>
-				<td><%= sale.prenom %></td>
-				<td><%= sale.email %></td>
-				<td><%= sale.adresse %></td>
-				<td><%= sale.code_postal %></td>
-				<td><%= sale.pays %></td>
-				<td><%= sale.age %></td>
-				<td><%= sale.sexe %></td>
-			</tr>
-		<% end %>
-	</tbody>
+  <thead class="thead-inverse">
+    <tr>
+      <th>Numero Billet</th>
+      <th>Commande</th>
+      <th>Reservation</th>
+      <th>Date reservation</th>
+      <th>Heure reservation</th>
+      <th>Cle spectacle</th>
+      <th>Spectacle</th>
+      <th>Cle representation</th>
+      <th>Date representation</th>
+      <th>Heure representation</th>
+      <th>Date fin representation</th>
+      <th>Heure fin representation</th>
+      <th>Prix</th>
+      <th>Date acces</th>
+      <th>Heure acces</th>
+      <th>Tarif</th>
+      <th>Type de client</th>
+      <th>Type de produit</th>
+      <th>Serie</th>
+      <th>Etage</th>
+      <th>Filiere de vente</th>
+      <th>Nom</th>
+      <th>Prenom</th>
+      <th>Email</th>
+      <th>Adresse</th>
+      <th>Code postal</th>
+      <th>Pays</th>
+      <th>Age</th>
+      <th>Sexe</th>
+    <tr>
+  </thead>
+  <tbody>
+    <% @sales.each do |sale| %>
+      <tr>
+        <td><%= sale.numero_billet %></td>
+        <td><%= sale.commande %></td>
+        <td><%= sale.reservation %></td>
+        <td><%= sale.date_reservation %></td>
+        <td><%= sale.heure_reservation %></td>
+        <td><%= sale.cle_spectacle %></td>
+        <td><%= sale.spectacle %></td>
+        <td><%= sale.cle_representation %></td>
+        <td><%= sale.date_representation %></td>
+        <td><%= sale.heure_representation %></td>
+        <td><%= sale.date_fin_representation %></td>
+        <td><%= sale.heure_fin_representation %></td>
+        <td><%= sale.prix %></td>
+        <td><%= sale.date_acces %></td>
+        <td><%= sale.heure_acces %></td>
+        <td><%= sale.tarif %></td>
+        <td><%= sale.type_de_client %></td>
+        <td><%= sale.type_de_produit %></td>
+        <td><%= sale.serie %></td>
+        <td><%= sale.etage %></td>
+        <td><%= sale.filiere_de_vente %></td>
+        <td><%= sale.nom %></td>
+        <td><%= sale.prenom %></td>
+        <td><%= sale.email %></td>
+        <td><%= sale.adresse %></td>
+        <td><%= sale.code_postal %></td>
+        <td><%= sale.pays %></td>
+        <td><%= sale.age %></td>
+        <td><%= sale.sexe %></td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
