@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :sales do
   	collection do
   		post :import
+  		get :stats
   	end
   end
 end

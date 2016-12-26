@@ -15,4 +15,11 @@ class SalesController < ApplicationController
 
 	def show
 	end
+
+	def stats
+		@reservation_number = Sale.distinct.count(:reservation)
+		@client_number = Sale.select(:email).distinct.count
+		@average_age = Sale.select(:email).distinct.average(:age)
+		@average_prix = Sale.select(:email).distinct.average(:prix)
+	end
 end
